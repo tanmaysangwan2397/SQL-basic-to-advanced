@@ -2,9 +2,9 @@ Assume that you are given the table below containing information on viewership b
 
 | Column_name   | 		 Type	    															|
 | ------------- | ------------------------------------------- |
-| `user_id`     | integer      																|
-| `device_type` | string('laptop','desktop','tablet','phone'  |
-| `view_time`   | timestamp																		|
+| user_id       | integer      																|
+| device_type   | string('laptop','desktop','tablet','phone') |
+| view_time     | timestamp																		|
 
 
 Output the total viewership for laptop and mobile devices in the format of "PC_views" and "mobile_views".
