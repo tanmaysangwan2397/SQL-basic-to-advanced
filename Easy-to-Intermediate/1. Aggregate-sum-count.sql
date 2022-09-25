@@ -1,5 +1,5 @@
 
-1. Assume that you are given the table below containing information on viewership by device type (where the four types are laptop, desktop, tablet, and phone). 
+#1 Assume that you are given the table below containing information on viewership by device type (where the four types are laptop, desktop, tablet, and phone). 
 Define “mobile” as the sum of tablet and phone viewership numbers. Define “PC” as the sum of laptop and desktop viewership numbers.
 Write a query to compare the viewership on PC versus mobile devices.
 
@@ -28,3 +28,25 @@ Note that,
   When we use sum(), we use values '1' or '0' but when we use count(), we use '1' or 'null'. This is because count() can count 1s as well as 0s.
   
   
+#2 Find how many times each artist appeared on the Spotify ranking list. Output the artist name along with the corresponding number of occurrences.
+Order records by the number of occurrences in descending order.
+
+| Column_name | type    |
+|-------------|---------|
+| id          | int     |
+| position    | int     |
+| trackname   | varchar |
+| artist      | varchar |
+| streams     | int     |
+| url         | varchar |
+| date        | datetime|
+| region      | varchar |
+
+Solution-
+
+select 
+    artist
+    , count(position) as occurences
+from spotify_song_ranking
+group by artist
+order by occurences desc;
